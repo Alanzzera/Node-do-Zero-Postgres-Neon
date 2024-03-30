@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1% 1%;
+    background-color: #f0f0f0; /* Cor de fundo para o body */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: start; /* Alinha o conteúdo do body à esquerda */
+}
+
+h1, h2 {
+    text-align: start;
+}
+
+button#showFormButton {
+    display: block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Adiciona transição ao hover */
+}
+
+button#showFormButton:hover {
+    background-color: #0056b3; /* Altera a cor de fundo no hover */
+    transform: scale(1.05); /* Adiciona um efeito de escala ao hover */
+}
+
+#videoFormContainer {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#videoFormContainer h2 {
+    text-align: center;
+}
+
+#videoForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#videoForm label, #videoForm input, #videoForm button {
+    margin-bottom: 10px;
+}
+
+#videoForm label {
+    font-weight: bold;
+}
+
+#videoForm input, #videoForm button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#videoForm button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#videoForm button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo da lista de vídeos */
+#videoList {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Torna a lista um flex container */
+    flex-wrap: wrap; /* Permite que os itens da lista sejam distribuídos em várias linhas */
+    justify-content: flex-start; /* Alinha os itens da lista no início do contêiner */
+}
+
+/* Estilo dos itens da lista */
+#videoList li {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+    padding: 16px;
+    width: calc(20% - 20px); /* Define a largura de cada item da lista.
+                                Subtraímos  margem e o padding para manter 5 itens por linha */
+    margin-right: 20px; /* Adiciona uma margem entre os itens da lista */
+    flex: 0 0 auto; /* Impede que os itens da lista sejam redimensionados */
+}
+
+/* Estilo do título do vídeo */
+#videoList li span.title {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Estilo da descrição do vídeo */
+#videoList li p.description {
+    color: #666;
+    margin-top: 8px;
+}
+
+/* Estilo da duração do vídeo */
+#videoList li span.duration {
+    color: #999;
+    font-size: 14px;
+}

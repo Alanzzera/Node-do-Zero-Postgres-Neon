@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Video CRUD</title>
+</head>
+<body>
+    <h1>Video CRUD</h1>
+    <button id="showFormButton">Adicionar</button> <!-- Botão para exibir o formulário -->
+    <div id="videoFormContainer" style="display: none;"> <!-- Container do formulário (inicialmente oculto) -->
+        <h2>Cadastrar/Editar</h2>
+        <form id="videoForm">
+            <label for="title">Título:</label>
+            <input type="text" id="title" required>
+            <label for="description">Descrição:</label>
+            <input type="text" id="description" required>
+            <label for="duration">Duração:</label>
+            <input type="number" id="duration" required>
+            <button type="submit">Adicionar</button>
+        </form>
+    </div>
+    <h2>Listar Vídeos</h2>
+    <ul id="videoList"></ul>
+</body>
+</html>
