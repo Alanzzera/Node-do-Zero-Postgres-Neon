@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Função para carregar os vídeos da API e exibir na lista
     function loadVideos() {
-        fetch('http://localhost:3333/videos')
+        fetch('https://node-do-zero-postgres-neon.onrender.com/videos')
             .then(response => response.json())
             .then(videos => {
                 const videoList = document.getElementById('videoList');
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             body: JSON.stringify(formData)
         };
-        fetch('http://localhost:3333/videos', requestData)
+        fetch('https://node-do-zero-postgres-neon.onrender.com/videos', requestData)
             .then(response => {
                 if (response.ok) {
                     loadVideos();
